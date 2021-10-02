@@ -18,6 +18,7 @@ export const cartSlice = createSlice({
 export const { addToCart, removeFromCart } = cartSlice.actions
 
 // Selectors - This is how we pull information from the Global store slice
-export const selectItems = (state) => state.cart.items
+//dont know why basket is working ant not cart  ↓
+export const selectItems = (state) => state.basket.items
 
 export default cartSlice.reducer
