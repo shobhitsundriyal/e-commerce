@@ -10,7 +10,7 @@ export default function Home({ products /**from SSR */ }) {
 				<title>HomePage</title>
 			</Head>
 			<Header />
-			<main className='max-w-7xl mx-auto bg-gray-100'>
+			<main className='main_area'>
 				{/**banner */}
 				<Banner />
 				{/**products */}

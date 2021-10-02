@@ -2,6 +2,9 @@ import React from 'react'
 import Image from 'next/dist/client/image'
 import { StarIcon } from '@heroicons/react/solid'
 import Currency from 'react-currency-formatter'
+import { motion } from 'framer-motion'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../slices/cartSlice'
 
 export default function Product({
 	id,
@@ -14,8 +17,29 @@ export default function Product({
 }) {
 	const stars = Math.round(rating.rate)
 	const hasFreeDelivry = price > 60 ? true : false
+
+	const dispatch = useDispatch()
+	const addItemToCart = () => {
+		const product = {
+			id,
+			title,
+			description,
+			price,
+			category,
+			image,
+			rating,
+		}
+		//Sending product to as an action to redux store... the cart Slice
+		dispatch(addToCart(product))
+	}
+
 	return (
-		<div className='relative flex flex-col bg-white m-5 p-10 rounded-lg z-20 hover:shadow-xl'>
+		<motion.div
+			className='relative flex flex-col bg-white m-5 p-10 rounded-lg z-20 hover:shadow-xl'
+			initial={{ opacity: 0, y: 100 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 1 }}
+		>
 			<p className='absolute top-2 right-2 text-xs text-gray-600'>
 				{category}
 			</p>
@@ -51,7 +75,9 @@ export default function Product({
 				</div>
 			)}
 
-			<button className='mt-auto button'>Add to Cart</button>
-		</div>
+			<button onClick={addItemToCart} className='mt-auto button'>
+				Add to Cart
+			</button>
+		</motion.div>
 	)
 }
