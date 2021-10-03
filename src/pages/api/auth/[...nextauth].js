@@ -8,9 +8,6 @@ export default NextAuth({
 			clientId: process.env.GOOGLE_ID,
 			clientSecret: process.env.GOOGLE_SECRET,
 		}),
-		Providers.Email({
-			server: process.env.EMAIL_SERVER,
-			from: process.env.EMAIL_FROM,
-		}),
+		//more providers can be added here
 	],
 })

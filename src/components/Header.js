@@ -23,7 +23,7 @@ function Header() {
 				onClick={() => router.push('/')}
 			>
 				<Image
-					src='https://www.nicepng.com/png/full/16-167642_amazon-logo-amazon-logo-white-text.png'
+					src='https://firebasestorage.googleapis.com/v0/b/ji-drive.appspot.com/o/Files%2Fthisamzone.png?alt=media&token=d458f075-5919-4746-b1f9-acb15b87fa05'
 					height={40}
 					width={120}
 					objectFit='contain'

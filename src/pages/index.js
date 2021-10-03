@@ -7,7 +7,7 @@ export default function Home({ products /**from SSR */ }) {
 	return (
 		<div>
 			<Head>
-				<title>HomePage</title>
+				<title>Amzone</title>
 			</Head>
 			<Header />
 			<main className='main_area'>

@@ -8,6 +8,7 @@ module.exports = {
 			'is4-ssl.mzstatic.com',
 			'firebasestorage.googleapis.com',
 			'encrypted-tbn0.gstatic.com',
+			'www.google.com',
 		],
 	},
 }
