@@ -56,7 +56,7 @@ export default function Product({
 						exit={{ opacity: 0.2 }}
 						transition={{ duration: 0.1, ease: 'easeIn' }}
 					>
-						<motion.div className='h-full w-full bg-gray-500 absolute opacity-30 z-10 top-0 left-0 rounded-lg'></motion.div>
+						<div className='h-full w-full bg-gray-500 absolute opacity-30 z-10 top-0 left-0 rounded-lg'></div>
 						<CheckCircleIcon
 							className='h-20 absolute left-[38%] top-[38%] text-[#007f00]
 				opacity-100 z-30'
