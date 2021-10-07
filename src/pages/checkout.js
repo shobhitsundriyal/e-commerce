@@ -10,6 +10,9 @@ import { TrashIcon } from '@heroicons/react/outline'
 import { motion, AnimatePresence } from 'framer-motion'
 import Currency from 'react-currency-formatter'
 import { useSession } from 'next-auth/client'
+import { loadStrip } from '@stripe/stripe-js'
+
+const stripePromise = loadStrip()
 
 function cart() {
 	const items = useSelector(selectItems) //getting items from cart state in store
@@ -19,6 +22,10 @@ function cart() {
 	const session = useSession()
 
 	const areItemsPresent = items.length > 0 ? true : false
+
+	const createCheckoutSessoion = () => {
+		;``
+	}
 
 	return (
 		<div>
@@ -85,7 +92,7 @@ function cart() {
 				</div>
 
 				{/**Right */}
-				<div className='bg-white my-6 mx-5 md:mx-0 space-y-5 p-3'>
+				<div className='bg-white my-6 mx-5 md:mx-0 space-y-5 p-3 flex flex-col'>
 					{areItemsPresent && (
 						<>
 							<h2 className='text-xl'>Total: {'  '}</h2>
@@ -93,6 +100,8 @@ function cart() {
 								<Currency quantity={total} currency='bsd' />
 							</span>
 							<button
+								role='link'
+								onClick={createCheckoutSessoion}
 								disabled={!session[0]}
 								className={`button w-44 ${
 									!session[0] &&

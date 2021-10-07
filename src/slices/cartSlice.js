@@ -75,6 +75,6 @@ export const { addToCart, removeFromCart, emptyTheCart, decreaseCount } =
 //dont know why basket is working ant not cart  ↓... fixed is store.js...ok fixed
 export const selectItems = (state) => state.cart.items
 export const selectTotal = (state) =>
-	state.cart.items.reduce((total, item) => total + item.price * item.count, 0)
+	state.cart.items.reduce((total, item) => total + item.price * item.count, 0) //good function
 
 export default cartSlice.reducer

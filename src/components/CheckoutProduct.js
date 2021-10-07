@@ -53,7 +53,7 @@ function CheckoutProduct({
 	return (
 		<AnimatePresence>
 			<motion.div
-				className='grid grid-cols-5 my-5 border-2 bg-gray-50 p-2'
+				className='sm:grid sm:grid-cols-5 my-5 border-2 bg-gray-50 p-2 flex flex-col'
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				exit={{ opacity: 0, x: 100 }}
@@ -90,14 +90,17 @@ function CheckoutProduct({
 					<div className='flex justify-center'>
 						<button
 							onClick={() => dispatch(decreaseCount(id))}
-							className='button px-3'
+							className='button px-3 w-full'
 						>
 							-
 						</button>
-						<div className='bg-gray-100 border-2 border-blue-400 rounded-md items-center flex px-5'>
+						<div className='bg-gray-100 border-2 border-blue-400 rounded-md items-center flex px-5 justify-center w-full'>
 							{itemCount}
 						</div>
-						<button onClick={addItemToCart} className='button px-3'>
+						<button
+							onClick={addItemToCart}
+							className='button px-3 w-full'
+						>
 							+
 						</button>
 					</div>
