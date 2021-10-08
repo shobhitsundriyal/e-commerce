@@ -12,7 +12,7 @@ import Currency from 'react-currency-formatter'
 import { useSession } from 'next-auth/client'
 import { loadStrip } from '@stripe/stripe-js'
 
-const stripePromise = loadStrip()
+//const stripePromise = loadStrip()
 
 function cart() {
 	const items = useSelector(selectItems) //getting items from cart state in store
