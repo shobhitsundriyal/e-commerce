@@ -10,7 +10,7 @@ import { TrashIcon } from '@heroicons/react/outline'
 import { motion, AnimatePresence } from 'framer-motion'
 import Currency from 'react-currency-formatter'
 import { useSession } from 'next-auth/client'
-import { loadStrip } from '@stripe/stripe-js'
+//import { loadStripe } from '@stripe/stripe-js'
 
 //const stripePromise = loadStrip()
 
